@@ -1,0 +1,16 @@
+<h1>Mensajes</h1>
+<hr>
+
+
+<div class="card" style="height: 25rem;">
+  <div class="card-body" style="overflow: scroll;" id='chat-mensajes'>
+      <ul class="list-group list-group-flush">
+          <li *ngFor="let row of mensajes" class="list-group-item">{{ row.de }} : {{ row.cuerpo }}</li>
+        </ul>
+  </div>
+  <div class="card-footer text-muted">
+    <form (ngSubmit)="enviar()">
+      <input [(ngModel)]="texto" name="texto" type="text" class="form-control" placeholder="Mensaje..." autofocus autocomplete="off">
+    </form>
+  </div>
+</div>
