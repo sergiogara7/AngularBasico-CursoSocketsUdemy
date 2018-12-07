@@ -1,11 +1,12 @@
 <h1>Usuario: <small>{{  _wsService.usuario.nombre }}</small></h1>
-
+<button (click)="salir()" class="btn btn-danger"> Salir</button>
 <hr>
 
 <div class="row">
   <div class="col-md-6">
     <h4>Usuarios conectados</h4>
     <hr>
+    <app-lista-usuarios></app-lista-usuarios>
   </div>
   <div class="col-md-6">
     <h4>Mensajes</h4>
